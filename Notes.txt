@@ -1,0 +1,50 @@
+1. Apa itu GIT dan GITHUB
+https://www.youtube.com/watch?v=lTMZxWMjXQU&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf
+
+- Git dan github bisa dipakai terpisah 
+- Git adalah salah satu VCS --> kelola perubahan dokumen/source code
+- bisa kembali ke versi sebelumnya 
+- tau siapa yang melakukan dan kapan
+
+Kenapa? 
+- kesulitan organize versi program 
+- kolaborasi : bisa sharing
+
+Bedanya sama dropbox dan gdrive? 
+- kurang fleksibel karena buka ngatur source code 
+
+Git : 
+- kelola perubahan file di dalam folder (repository/repo)
+- commit --> git bakal rekam snapshot 
+- file yg disave cuma 1, tp dia bakal nyimpen perubahan perubahan yang dilakukan
+
+isi tiap commit:
+hash/string random penanda untuk tiap commit 
+author : siapa yang commit 
+date: kapan 
+keterangan
+
+commit --> branch --> merge (untuk gabungin)
+
+GitHub: 
+- layanan cloud utk simpan dan kelola project atau repo git
+
+GITHUB + GIT 
+bisa puh n pull commit antar keduanya 
+harus bikin github jadi remote (jd sumber) --> clone ke git --> pull and push commit
+
+repo : folder 
+commit: rekaman/snapshot dari repo 
+hash: penanda unik pada commit 
+checkout: berpindah ke sebuah commit 
+bracnk: cabang 
+merge : gabungkan branch 
+remote: sumber yang memiliki repo (bisa github, gitLab, bitbucket,  dll)
+clone: ambil repo dari remote 
+push : kirim commit 
+pull: ambil commit
+
+2. Bekerja dengan GITHUB 
+https://www.youtube.com/watch?v=Q3Id0DgcrXY&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&index=2
+
+
