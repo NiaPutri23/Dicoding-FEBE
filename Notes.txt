@@ -46,5 +46,12 @@ pull: ambil commit
 
 2. Bekerja dengan GITHUB 
 https://www.youtube.com/watch?v=Q3Id0DgcrXY&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&index=2
-
+Intinya 
+- cara bikin akun, 
+- fitur fitur basic di gthub 
+- cara bikin repo, 
+- bikin new file di repo, 
+- commit, 
+- liat history 
+insight --> network --> keliatan commit dalam bentuk titik-titik (timeline commit, branch dll)
 
