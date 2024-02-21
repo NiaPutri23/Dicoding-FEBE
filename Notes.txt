@@ -75,4 +75,56 @@ https://www.youtube.com/watch?v=8rry2ncZmfg&list=PLFIM0718LjIVknj6sgsSceMqlq242-
 Fork: duplikat repo lain serta historynya 
 - biar ga ganggu repo aslinya 
 - fork tidak sama dengan clone 
+akan ada keterangan fork sumber 
+fork --> edit --> commit --> pull req kalo mau kirim ke sumber 
+liat pull req --> bisa edit dulu --> kasih message ke sender --> merge pull req 
 
+? kalo misal orang pull reqnya ke main, tp kita maunya naro dia ke branch, bisa ga?
+
+5. Bekerja dengan GIT 
+https://www.youtube.com/watch?v=e-6OkXRqWaE&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&index=5
+
+console/command prompt -- bakal ditulis sendiri perintahnya
+git client (GUI) -- ada UI nya 
+1. install git https://git-scm.com/
+2. select component -> ceklis git bash & git GUI
+3. adjusting PATH env -> pilih 3rd party software supaya bisa pake command prompt atau terminal lain 
+4. ketik command di command prompt 
+    git init 
+    git add <file> 
+    git status 
+    git commit 
+    git config 
+    git branch 
+    git help
+
+Terdapat 3 area pada repo git 
+folder dijadiin repo git -> git pantau perubahan --> git add -> git commit 
+working tree : tempat bekerja 
+staging area : ngasih tau git kalo ada perubahan
+history : commit atau tidak? -> disimpan di history 
+
+folder .git bakal simpen staging area dan history (defaultnya tersembunyi)
+
+masuk ke folder (cd <path folder>)
+inisisasi folder jadi repo (git init) --> bakal muncul sebagai 'master'
+bikin file, edit file dll pokoknya perubahan 
+simpan dulu ke staging area (git add <file>) (git add.) 
+cek status di working tree (git status) 
+commit (git commit -m "keterangan commit")
+  kalo baru pertama kali commit, git blm tau ownernya
+    git config --global user.name "your name"
+    git config --global user.email "you@example.com"
+cek history (git log) (git log -3) (git log -- <file>)
+kembali ke versi sebelumnya (git checkout <5 digit pertama dari commit hash> -- <nama file>)
+  git checkout 7667b -- style.css 
+  kembali ke commit hash 7667b dengan hanya mengembalikan perubahan pada file style.css
+
+kalo di vsc bisa langsung di consolenya aja edit file, bisa keliatan perubahannya di source control
+bisa tulis aja langsung perintah perintahnya di terminal
+ijo (blm ditambah ke repo) 
+oren (udah diadd)
+
+
+6. GIT BRANCH DAN MERGE 
+inisiasi folder jadi repo 
