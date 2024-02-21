@@ -43,6 +43,7 @@ remote: sumber yang memiliki repo (bisa github, gitLab, bitbucket,  dll)
 clone: ambil repo dari remote 
 push : kirim commit 
 pull: ambil commit
+pull req : meminta pemilik repo narik perubahan yg kita lakukan 
 
 2. Bekerja dengan GITHUB 
 https://www.youtube.com/watch?v=Q3Id0DgcrXY&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&index=2
@@ -54,4 +55,24 @@ Intinya
 - commit, 
 - liat history 
 insight --> network --> keliatan commit dalam bentuk titik-titik (timeline commit, branch dll)
+
+3. GITHUB: BRANCH 
+https://www.youtube.com/watch?v=k1QXd-8VbPY&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&index=3
+untuk apa? 
+- kalo ada fitur yang masih bingung, taro brach dulu jd perubahannya independen 
+- nanti bisa dimerge 
+- bisa untuk collab gt 
+
+klo mau merge --> compare and pull request (jd nnti dari branch bakal dimasukin ke main) 
+bakal dicek dulu (merge comflict) --> resolve conflct 
+
+dr branch bikin pull req --> acc merge 
+fast-forward merging
+rewind merging
+
+4. GITHUB: FORK 
+https://www.youtube.com/watch?v=8rry2ncZmfg&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&index=4
+Fork: duplikat repo lain serta historynya 
+- biar ga ganggu repo aslinya 
+- fork tidak sama dengan clone 
 
