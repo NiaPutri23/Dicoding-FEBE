@@ -122,9 +122,19 @@ kembali ke versi sebelumnya (git checkout <5 digit pertama dari commit hash> -- 
 
 kalo di vsc bisa langsung di consolenya aja edit file, bisa keliatan perubahannya di source control
 bisa tulis aja langsung perintah perintahnya di terminal
-ijo (blm ditambah ke repo) 
-oren (udah diadd)
-
+ijo untracked (blm ditambah ke repo) belom dipantau sama git perubahannya
+oren modified (udah diadd ke git jd kelacak perubahannya)
+source control liat perubahan 
 
 6. GIT BRANCH DAN MERGE 
 inisiasi folder jadi repo 
+
+implementasi branch 
+git branch <nama_branch>
+git branch : liat ada branch apa aja dan branch yang aktif 
+git log : liat history dr commit 
+git log --all --decorate --oneline --graph (untuk liat visualisasi commit dalam graph)
+alias  graph="git log --all --decorate --oneline --graph" (supaya inggal ketik graph)
+
+git checkout 
+
