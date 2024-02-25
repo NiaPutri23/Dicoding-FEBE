@@ -1,1 +1,10 @@
 https://www.dicoding.com/academies/256/corridor
+# Pendahuluan 
+- Dibuat Brendan Eich pada 1995, awalnya cuma bisa dijalankan di browser 
+- 2009, Ryan Dahl bikin Node.js --> bisa jalanin di sisi server (komputer)
+- JS agar website lebih interaktif 
+- Merupakan scripting language (kode ga perlu dikompliasi, cuma butuh interpreter) 
+- 2 lingkungan umum utk jalanin JS --> Browser dan Node.js 
+- standarnya ECMAScript 
+- update terbesar ke versi ES6 pada 2015, selanjutnya update minor 
+
