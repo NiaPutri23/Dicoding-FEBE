@@ -1,1 +1,137 @@
+# 1Pendahuluan 
+Cara internet bekerja 
+- manfaat internet: user kirim req dan terima hasil permintaan (data) pada website
+- komputer milik user terhubung dengan komputer lain yang biasa disebut dengan server
+- komputer komputer ini berkomunikasi melalui jaringan, baik dengan kabel maupun nirkabel.
+- network switch utk koneksi jaringan mudah dan efisien. Bahkan, satu jaringan dengan network switch dapat terhubung dengan network switch lain sehingga memperbesar koneksi komputer.
+- Internet Service Provider (ISP) agar saling terhubung dengan router ISP lainnya --> jaringan antar kontinen
 
+Website dan Halaman Web
+Halaman web : halaman tunggal yang menampilkan informasi, baik berupa teks, gambar, maupun media lainnya
+Website : sekumpulan halaman web yang saling terhubung dengan menggunakan hipertaut (hyperlink), baik dalam domain yang sama maupun berbeda.
+
+Web Server
+- Siklus Request dan Response
+Browser(client) request ke server --> server tanggapi dengan response
+- Peranan Web Server
+Berbicara mengenai web server, ia dapat terbagi menjadi dua hal, yaitu hardware dan software yang saling bekerja sama. 
+  Dari sisi hardware, web server merupakan komputer dengan spesifikasi yang disesuaikan berdasarkan layanannya. 
+  Contohnya, kapasitas hard drive yang besar akan dibutuhkan jika Anda memiliki website yang menyimpan banyak gambar.
+  Dari sisi software, web server merupakan komputer yang menjalankan sebuah program agar dapat menerima atau mengirim data melalui jenis protokol bernama HTTP. Ini merupakan protokol standar dalam melakukan transaksi data oleh browser.
+
+DNS Server
+Komputer pake alamat IP untuk mengakses website
+Nama domain = nama alias IP Address
+
+User buka web dgn domain --> browser tanya ke komputer apakah kenal dan tau IP Address dr domain --> komputer cek DNS cache --> jika tau --> kasih alamat IP dan tampilkan web 
+jika tidak tau --> tanya ke DNS server --> beri tahu alamat IP yang sesuai dari nama domain yang terdaftar padanya --> kasoh alamat IP dan tampilkan web 
+
+Cara Browser Bekerja
+user mengakses website dengan URL --> browser buat request --> kirimkan ke web server --> web server kirim response berisi konten-konten yang dibutuhkan oleh website dan browser akan memprosesnya hingga tampil website pada perangkat user.
+
+Browser memiliki address bar yang merupakan sebuah input bagi user untuk menuliskan alamat website atau yang biasa disebut Uniform Resource Locator (URL) = protocol (https) + domain name (dicoding.com) + file path (alamat halaman web yang sedang ditampilkan)
+
+Anatomi Website
+HTML: sebuah markup language yang menentukan struktur atau kerangka dari halaman web
+CSS: sebuah markup language yang memberikan gaya atau styling agar halaman web ditampilkan lebih ciamik
+JavaScript: satu-satunya programming language yang didukung oleh browser untuk meningkatkan interaktivitas pada halaman web.
+
+# CSS
+- merupakan standar dari W3C untuk mengatur visualisasi berkas yang ditulis pada HTML.
+CSS digunakan untuk mendeklarasikan nilai yang mengatur tampilan elemen HTML pada browser.
+
+Keuntungan dan Cara CSS Bekerja:
+- Mengontrol dan menerapkan layout secara presisi.
+- Menghindari pekerjaan yang berulang-ulang dalam menerapkan styling.
+- Didukung oleh banyak browser, termasuk browser populer seperti Chrome dan Firefox.
+
+Menulis Aturan Styling:
+Aturan CSS terdiri dari dua bagian: selector (identitas elemen) dan deklarasi (instruksi yang diterapkan pada selector).
+
+Cara melampirkan styling pada dokumen HTML:
+- External Style Sheet: Berkas CSS terpisah yang dihubungkan dengan dokumen HTML menggunakan tag <link>.
+- Embedded Style Sheet: Aturan CSS ditulis langsung di dalam tag <style> dalam dokumen HTML.
+- Inline Style: Styling diterapkan langsung pada elemen HTML menggunakan atribut style.
+
+CSS Conception:
+- Inheritance: Properti style dapat diwariskan dari sebuah elemen ke elemen-elemen di dalamnya.
+- Group Selector: Selector dengan penerapan properti yang sama dapat digabungkan untuk menghindari penulisan kode yang berulang.
+- Rule Order: Urutan penulisan aturan CSS sangat penting karena CSS mengalir dari atas ke bawah, sehingga aturan yang ditulis terakhir akan diterapkan jika terjadi konflik.
+
+##############################
+Rangkuman Pendalaman CSS dapat dijabarkan dalam poin-poin sebagai berikut:
+
+1. **Selector Dasar**:
+   - Type Selector: Menggunakan nama elemen sebagai target untuk menerapkan rule.
+   - Class Selector (.): Menetapkan target elemen berdasarkan nilai dari atribut class yang diterapkan pada elemennya.
+   - ID Selector (#): Menetapkan target elemen berdasarkan nilai dari atribut id yang diterapkan pada elemennya.
+   - Attribute Selector: Menetapkan target elemen berdasarkan sebuah atribut yang digunakan atau nilai yang dimilikinya.
+   - Universal Selector: Digunakan untuk menerapkan aturan pada seluruh elemen.
+
+2. **Combinators**:
+   - Adjacent Sibling Selector (+)
+   - General Sibling Selector (~)
+   - Child Selector (>)
+   - Descendant Selector (space)
+
+3. **Pseudo Selector**:
+   - Pseudo-class Selector
+   - Pseudo-element Selector
+
+4. **Font Styling**:
+   - font-family
+   - font-size
+   - font-weight
+   - font-style
+   - font-variant
+   - font (shorthand)
+
+5. **Text Styling**:
+   - Line-height
+   - Text-indent
+   - Text-align
+   - Text-decoration
+   - Text-transform
+   - Word and Letter Spacing
+   - Text-shadow
+
+6. **Menetapkan Nilai Warna**:
+   - Numeric Value
+   - Predefined Color Name
+   - Warna untuk Teks dan Latar Belakang
+   - Opacity
+
+7. **Box Model**:
+   - Dimension
+   - Limiting Dimension
+   - Overflowing Content
+   - Box-sizing
+   - Border
+   - Padding
+   - Margin
+
+8. **Display Roles**:
+   - Inline Element
+   - Block Element
+
+9. **Box Shadow**
+
+10. **Rounded Corner**
+
+11. **Positioning**:
+    - Normal Flow/Static Flow
+    - Relative Positioning
+    - Absolute Positioning
+    - Fixed Positioning
+
+12. **Floating**
+
+13. **Permasalahan Penerapan Float**:
+    - Clear Property
+    - Teknik Overflow
+
+14. **Konfigurasi Meta Tag Viewport untuk Responsibilitas Layout**
+
+15. **Specific Style dengan Media Query**
+
+Dengan pemahaman mendalam tentang berbagai konsep ini, pengembang web dapat membuat tata letak yang fleksibel, tampilan yang menarik, dan responsif terhadap berbagai perangkat dan ukuran layar.
