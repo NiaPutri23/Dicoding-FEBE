@@ -8,3 +8,124 @@ https://www.dicoding.com/academies/256/corridor
 - standarnya ECMAScript 
 - update terbesar ke versi ES6 pada 2015, selanjutnya update minor 
 
+#Fundamental JS
+console.log("Hello World!");
+
+##Instruksi --> 2 jenis:  expression dan statement.
+Expression : unit kode yang dapat dievaluasi menjadi suatu nilai. 
+Statement : instruksi untuk melakukan sebuah aksi tertentu. Aksi ini bisa termasuk membuat variabel, melakukan perulangan, pengecekan kondisi, dll.
+
+##Comments 
+//
+/**/
+
+##Variable --> var, let, const
+Harus dimulai dengan huruf atau underscore (_).
+Dapat terdiri dari huruf, angka, dan underscore (_) dengan berbagai kombinasi.
+Tidak boleh mengandung spasi (whitespace). Jika penamaan variabel lebih dari dua kata, tuliskan secara camelCase. Contoh firstName, lastName, catName, dll.
+Tidak boleh mengandung karakter spesial (! . , / \ + * = dll.)
+
+##Tipe data 
+- Undefined : variabel tidak memiliki nilai. Artinya, ketika kita mendeklarasikan variabel tanpa menginisialisasikan nilainya, variabel tersebut menjadi undefined. 
+  let x;
+  console.log(typeof(x));
+- Numbers : mencakup nilai dari -(2^53 - 1) hingga (2^53 - 1)
+  let x = 10;
+- BigInt : untuk kripto dll yg butuh nilai besar, dengan menambahkan n di akhir angka 
+  const bigNumber = 1234567890123456789012345678901234567890n;
+  const myInt = 1234567890123456789012345678901234567890;
+  
+  console.log(bigNumber);
+  console.log(myInt);
+  
+  /* output
+  1234567890123456789012345678901234567890n
+  1.2345678901234568e+39
+  */
+- Strings: pake '' atau ""
+  string concatenation akan menggabungkan string apa adanya pake +
+  string interpolation bisa memasukkan variabel ke dalam sebuah string template (console.log(`Hello, my name is ${myName}.`))
+- Boolean : true false
+- NULL : Serupa dengan undefined, namun null perlu diinisialisasikan pada variabel. Null biasa digunakan sebagai nilai sementara pada variabel, tapi sebenarnya nilai tersebut “tidak ada”.
+  let someLaterData = null;
+  console.log(someLaterData);
+  
+  /* output:
+  null
+  */
+- Symbol : identifier yang unik, bisa berikan desc atau nama symbol 
+  const id = Symbol("id");
+  console.log(id);
+  
+  /* output
+  Symbol(id)
+  */
+
+##Operator
+- assignment (x + y) dll
+- comparison (== === != !== > < dll)
+- logical (&& || !)
+
+##If Else Statement 
+if(x > 70) {
+    console.log(x);
+} else {
+    console.log("Nilai kurang dari 70");
+}
+
+atau pake 1 baris dengan ? dan :
+
+const isMember = false;
+const discount = isMember ? 0.1 : 0;
+console.log(`Anda mendapatkan diskon sebesar ${discount * 100}%`)
+
+
+  Truthy & Falsy :  nilai yang mewarisi sifat boolean, contoh yang falsy yaitu, 
+    Number 0
+    BigInt 0n
+    String kosong seperti “” atau ‘’
+    null
+    undefined
+    NaN, atau Not a Number
+
+##Switch Case 
+switch (expression) {
+  case value1:
+    // do something
+    break;
+  case value2:
+    // do something
+    break;
+  ...
+  ...
+  default:
+    // do something else
+}
+
+##Loop
+a. for loop 
+for(let i = 0; i < 5; i++) {
+  console.log(i);
+}
+b. for of loop 
+let myArray = ["Luke", "Han", "Chewbacca", "Leia"];
+
+for(const arrayItem of myArray) {
+  console.log(arrayItem)
+}
+c. while
+let i = 1;
+
+while (i <= 100) {
+  console.log(i);
+  i++;
+}
+
+d. do while
+let i = 1;
+
+do {
+  console.log(i);
+  i++;
+} while (i <= 100);
+
