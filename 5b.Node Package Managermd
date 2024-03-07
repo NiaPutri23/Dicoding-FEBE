@@ -1,0 +1,46 @@
+# Node Package Manager 
+- semakin kompleks aplikasi maka kita butuh package manager
+- NPM kelola package pada proyek, bisa pasang dan apus yg dibuat org lain pada proyek kita
+- bisa bikin module/package untuk publik
+- Java dgn Maven & Gradle, PHP dgn Composer, Python dengan pip, JS dengan NPM dan Yarnp Package Manager
+`npm <perintah> -h` : panduan penggunaan salah satu perintahnya 
+beberapa contoh command
+`init`: Perintah untuk membuat berkas package.json di dalam proyek Anda. Berkas package.json ini berisi informasi tentang proyek Anda dan daftar dependensi yang digunakan.
+[--force|-f|--yes|-y|--scope]
+`install`: Digunakan untuk memasang paket-paket dari repositori NPM (Node Package Manager) dan mendaftarkannya di dalam berkas package.json. Contoh: npm install <package-name>.
+[-P|--save-prod|-D|--save-dev|-O|--save-optional] [-E|--save-exact] [-B|--save-bundle] [--no-save] [--dry-run]
+`run-script`: Menjalankan perintah yang terdaftar dalam bagian scripts di dalam berkas package.json. Contoh: npm run <command>.
+[--silent] [-- <args>...]
+`uninstall`: Menghapus paket-paket dari proyek Anda dan menghapus daftar dependensi dari berkas package.json. Contoh: npm uninstall <package-name>.
+[-S|--save|-D|--save-dev|-O|--save-optional|--no-save]
+`version`: Perintah untuk melihat atau mengatur versi dari paket yang terinstal. Contoh: npm version.[<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease [--preid=<prerelease-id>] | from-git]
+
+## Installing Packages 
+ada 2 jenis instalasi -> local install dan global install
+- local akan disimpan dalam folder yang sama dgn project -> akan diletakkan di folder node_modules
+- global akan dipasang di folder sesuai pengaturan pas instalasi node 
+- bikin package.json dulu di folder project dengan `npm init`
+`npm install <package-name>`
+`npm install -g <package-name>`
+
+ada 2 tipe object dependencies -> object dependencies dan devDependencies 
+- Objek dependencies merupakan objek yang menampung package yang kita gunakan untuk membuat aplikasi
+- Objek devDependencies digunakan untuk package yang berkaitan hanya saat proses pengembangan aplikasi, contohnya seperti package jest yang digunakan untuk testing.
+- Package seperti jest ini hanya digunakan saat proses pengembangan aplikasi. Ia tidak digunakan lagi ketika aplikasi rilis atau digunakan langsung oleh pengguna.
+- Untuk memasang package sebagai devDependencies -> tambahin parameter `--save -dev` pada npm install
+  `npm install <package-name> --save-dev`
+  Setelah package terpasang, maka akan ditambahkan ke berkas package.json.
+  `"devDependencies": {
+  "jest": "^26.6.3"
+  }`
+
+## Using packages 
+`import variableName from 'package-name';`
+`import _ from 'lodash';`
+`import _ from 'lodash';`
+
+## Uninstalling package 
+`npm uninstall <package-name>`
+`npm uninstall <package-name> --save-dev`
+`npm uninstall lodash`
+`npm uninstall -h`
