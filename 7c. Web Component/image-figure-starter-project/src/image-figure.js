@@ -15,4 +15,14 @@ class ImageFigure extends HTMLElement{
     }
 }
 
+class MyElement extends HTMLElement {
+    render() {
+      return `
+        <div>Lorem ipsum dolor amet.</div>
+      `;
+    }
+  }
+  
+customElements.define('my-element', MyElement);
+  
 customElements.define('image-figure', ImageFigure); //daftarin dengan method customElement.define
