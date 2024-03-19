@@ -1,0 +1,32 @@
+/* CSS Grid Layout */
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+  }
+  
+/* Custom styles for app bar */
+app-bar {
+background-color: blue;
+color: #fff;
+padding: 1rem;
+}
+
+/* Custom styles for note form */
+note-form {
+padding: 1rem;
+}
+
+/* Custom styles for note list */
+note-list {
+padding: 1rem;
+overflow-y: auto;
+}
+
+/* Custom styles for note item */
+note-item {
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+padding: 1rem;
+}
+  
