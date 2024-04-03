@@ -1,7 +1,7 @@
-const STORAGE_KEY = "notes_data"; // Tambahkan definisi STORAGE_KEY
-const SAVED_EVENT = "notes_saved"; // Tambahkan definisi SAVED_EVENT
+const STORAGE_KEY = "notes_data"; 
+const SAVED_EVENT = "notes_saved"; 
 
-// hasilkan id unik untuk catatan dengan format "notes-16karakter random"
+// id unik untuk catatan dengan format "notes-16karakter random"
 function generateId() {
   return "notes-" + Math.random().toString(36).substr(2, 16);
 }
@@ -18,6 +18,76 @@ function closeForm() {
 
 // array notes
 const notes = [];
+
+// custom element untuk tombol
+class CustomButton extends HTMLElement {
+  constructor() {
+    super();
+
+    // bikin shadow DOM
+    this.attachShadow({mode: 'open'});
+
+    // ambil nilai label dan action dari custom element
+    const label = this.getAttribute('label');
+    const action = this.getAttribute('action');
+
+    // template
+    const template = document.createElement('template');
+    template.innerHTML = `
+      <style>
+        button {
+          padding: 10px 25px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          white-space: nowrap;
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        button.add {
+          background-color: #498479;
+          color: white;
+          border: none;
+        }
+        
+        button.cancel {
+          background-color: grey;
+          color: white;
+          border: none;
+        }
+
+        button:hover {
+          opacity: 0.8;
+        }
+      </style>
+      <button class="${action}">${label}</button>
+    `;
+
+    // duplicate template ke dalam shadow DOM
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+    // event listener untuk tombol
+    const button = this.shadowRoot.querySelector('button');
+    button.addEventListener('click', () => {
+      switch(action) {
+        case 'add':
+          showForm();
+          break;
+        case 'save':
+          saveNote();
+          break;
+        case 'cancel':
+          closeForm();
+          break;
+        default:
+          break;
+      }
+    });
+  }
+}
+
+// define custom element
+customElements.define('custom-button', CustomButton);
 
 // simpan note
 function saveNote() {
@@ -43,7 +113,7 @@ function saveNote() {
 
   alert("Note Added!");
 
-  saveData(); // Simpan catatan ke local storage
+  saveData(); // simpan catatan ke local storage
 }
 
 // fungsi hasilkan current date 
@@ -97,7 +167,7 @@ function renderNotes() {
     const noteElement = document.createElement("div");
     noteElement.classList.add("note");
     if (note.archived && !document.getElementById("showArchived").checked) {
-      noteElement.style.display = "none"; // Sembunyikan catatan yang diarsipkan jika "Show Archived Notes" tidak dicentang
+      noteElement.style.display = "none"; // sembunyiin catatan yang diarsip kalo ga dicentang
     }
     noteElement.innerHTML = `
       <h3>${note.title}</h3>

@@ -7,14 +7,10 @@
 header {
     /* background-color: black; */
     display: flex;
-    justify-content: space-between; /* Untuk mengatur konten secara horizontal di tengah */
-    align-items: center; /* Untuk mengatur konten secara vertikal di tengah */
+    justify-content: space-between; 
+    align-items: center;
     height: 100%;
     margin: 20px; 
-}
-
-.tagline { 
-    
 }
 
 .tagline p{
@@ -83,7 +79,23 @@ textarea {
     justify-content: center; 
 }
 
-.btn-form input[type="submit"],
+.btn-form input[type="submit"]{
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px; 
+    white-space: nowrap;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    background-color: #498479;
+    color: white;
+    border: none;
+}
+
+.btn-form input[type="submit"]:hover{
+    opacity: 0.8;
+}
+/* .btn-form input[type="submit"],
 .btn-form button {
     width: 100px;
     height: 30px;   
@@ -93,7 +105,7 @@ textarea {
     border-radius: 7px;
     border: 1px solid #ccc; 
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .notes-grid {
     display: grid;
