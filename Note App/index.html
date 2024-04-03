@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="icon.svg" rel="icon" type="image/svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="icon.svg" rel="icon" type="image/svg" />
     <title>Note</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="icon.svg">
-        <h1>NOTE's</h1>
-        <p>Organize your cool ideas, thought, and inspiration here!</p>
+      <div class="tagline">
+        <div class="title">
+          <img src="icon.svg" />
+          <h1>NOTE's</h1>
+        </div>
+        <p>Organize your cool ideas, thoughts, and inspirations here!</p>
+      </div>
+
     </header>
-    <button onclick="showForm()">+ add note</button>
+    <div class="check-archive">
+        <input
+          type="checkbox"
+          id="showArchived"
+          onchange="toggleArchivedNotes()"
+        />
+        <label for="showArchived">Show Archived Notes</label>
+      </div>
     <div id="popupForm" class="popup-form">
-        <h2>Add New Note</h2>
-        <form id="noteForm">
-            <label for="title">Title</label><br>
-            <input type="text" id="title" name="title" required><br><br>
+      <h2>Add New Note</h2>
+      <form id="noteForm" onsubmit="saveNote()">
+        <label for="title">Title</label><br />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          required
+          minlength="3"
+        /><br /><br />
 
-            <label for="body">Body</label><br>
-            <textarea type="text" id="body" name="body" required></textarea><br><br>
-
-            <input type="submit" value="save" onclick="saveNote()">
-            <button onclick="closeForm()">cancel</button>
-        </form>
+        <label for="body">Body</label><br />
+        <textarea
+          type="text"
+          id="body"
+          name="body"
+          required
+          minlength="2"
+        ></textarea
+        ><br /><br />
+        <div class="btn-form">
+          <input type="submit" value="save" />
+          <button onclick="closeForm()">cancel</button>
+        </div>
+      </form>
     </div>
 
     <div id="notesGrid" class="notes-grid"></div>
 
-
-
-
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
